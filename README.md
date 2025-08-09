@@ -6,9 +6,8 @@ The system is designed with a clean, conventional Spring Boot architecture, sepa
 
 <!-- Optional: To add a screenshot, upload an image to a site like Imgur and paste the link here. -->
 <!-- Optional: To add a screenshot, upload an image to a site like Imgur and paste the link here. -->
-[Dashboard Screenshot](<img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/cac81134-34e1-4ec5-87d1-263f42709faa">)
+[Dashboard Screenshot]
 <img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/743847ce-7548-4200-a8eb-7c6675ddedef" />
-<img width="1919" height="616" alt="Screenshot 2025-08-09 151100" src="https://github.com/user-attachments/assets/9c7ab7b3-d5a4-4661-a30d-6b0091dab035" />
 
 
 
@@ -161,6 +160,7 @@ The application is pre-populated with two default users. The password for both i
 <img width="1920" height="1080" alt="Screenshot 2025-08-09 150956" src="https://github.com/user-attachments/assets/90b4f7ee-c822-4eff-b1c8-4bcbe3c2efb8" />
 <img width="1919" height="973" alt="Screenshot 2025-08-09 151029" src="https://github.com/user-attachments/assets/3708588e-ac0f-4c93-9934-49fe35efe071" />
 <img width="1919" height="616" alt="Screenshot 2025-08-09 151100" src="https://github.com/user-attachments/assets/0a69e525-1359-4691-b300-47dbaae55e6d" />
+
 
 
 
