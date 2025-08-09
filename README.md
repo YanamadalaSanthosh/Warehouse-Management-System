@@ -5,10 +5,8 @@ Welcome to the Mini Warehouse Management System (WMS), a full-stack web applicat
 The system is designed with a clean, conventional Spring Boot architecture, separating concerns between the data, business logic, and presentation layers. It includes role-based security, data persistence, and a suite of features for managing inventory, orders, and users.
 
 <!-- Optional: To add a screenshot, upload an image to a site like Imgur and paste the link here. -->
-<!-- ![Dashboard Screenshot](https://i.imgur.com/your-screenshot-url.png) -->
 <!-- Optional: To add a screenshot, upload an image to a site like Imgur and paste the link here. -->
-<!-- ![Dashboard Screenshot](<img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/cac81134-34e1-4ec5-87d1-263f42709faa" />
-) -->
+[Dashboard Screenshot](<img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/cac81134-34e1-4ec5-87d1-263f42709faa">)
 
 
 ---
@@ -149,4 +147,5 @@ The application is pre-populated with two default users. The password for both i
     `http://localhost:8080/`
 2.  Use the `/api/auth/signin` endpoint to get a JWT token.
 3.  Click the `Authorize` button at the top of the Swagger page and paste your token (e.g., `eyJhbG...`) into the `Value` field to access the locked API endpoints.
+
 
