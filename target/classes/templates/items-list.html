@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Items</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <div class="container">
+        <!-- 
+            NEW FEATURE: Alert messages
+            These divs will only be rendered if the corresponding flash attribute
+            (e.g., 'success_message') is passed from the controller after a redirect.
+        -->
+        <div th:if="${success_message}" class="alert alert-success alert-dismissible fade show" role="alert">
+            <span th:text="${success_message}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div th:if="${error_message}" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span th:text="${error_message}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Inventory Items</h1>
+            <div class="btn-group" sec:authorize="hasAuthority('ADMIN')">
+                <a th:href="@{/web/items/export}" class="btn btn-secondary">Export to CSV</a>
+                <a th:href="@{/web/items/new}" class="btn btn-primary">Create New Item</a>
+            </div>
+        </div>
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>SKU</th>
+                    <th>Quantity</th>
+                    <th>Location</th>
+                    <th>Category</th>
+                    <th>Threshold</th>
+                    <th sec:authorize="hasAuthority('ADMIN')">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- If the list of items is empty, show a message -->
+                <tr th:if="${#lists.isEmpty(items)}">
+                    <td colspan="8" class="text-center">No inventory items found.</td>
+                </tr>
+                <!-- Otherwise, loop through and display the items -->
+                <tr th:each="item : ${items}">
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.name}"></td>
+                    <td th:text="${item.sku}"></td>
+                    <td th:text="${item.quantity}"></td>
+                    <td th:text="${item.location}"></td>
+                    <td th:text="${item.category}"></td>
+                    <td th:text="${item.threshold}"></td>
+                    
+                    <td sec:authorize="hasAuthority('ADMIN')">
+                        <a th:href="@{/web/items/edit/{id}(id=${item.id})}" class="btn btn-sm btn-warning">Edit</a>
+                        
+                        <form th:action="@{/web/items/delete/{id}(id=${item.id})}" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Add Bootstrap JS for the dismissible alerts to work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

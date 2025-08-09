@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Low Stock Items</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Low Stock Items Report</h1>
+            <a th:href="@{/dashboard}" class="btn btn-secondary">&larr; Back to Dashboard</a>
+        </div>
+        <p class="text-muted">Showing all items where the current quantity is at or below the reorder threshold.</p>
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>SKU</th>
+                    <th>Current Quantity</th>
+                    <th>Threshold</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${#lists.isEmpty(items)}">
+                    <td colspan="6" class="text-center">No low stock items found. All stock levels are healthy!</td>
+                </tr>
+                <!-- The items in this list are only the low-stock ones -->
+                <tr th:each="item : ${items}" class="table-warning">
+                    <td th:text="${item.itemId}"></td>
+                    <td th:text="${item.name}"></td>
+                    <td th:text="${item.sku}"></td>
+                    <td class="fw-bold" th:text="${item.quantity}"></td>
+                    <td th:text="${item.threshold}"></td>
+                    <td th:text="${item.location}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
