@@ -8,7 +8,8 @@ The system is designed with a clean, conventional Spring Boot architecture, sepa
 <!-- Optional: To add a screenshot, upload an image to a site like Imgur and paste the link here. -->
 [Dashboard Screenshot](<img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/cac81134-34e1-4ec5-87d1-263f42709faa">)
 <img width="1920" height="1080" alt="Screenshot 2025-08-09 150224" src="https://github.com/user-attachments/assets/743847ce-7548-4200-a8eb-7c6675ddedef" />
-<img width="1919" height="616" alt="Screenshot 2025-08-09 151100" src="https://github.com/user-attachments/assets/2efa85ae-85fc-40a1-9ead-4c9e5d28b251" />
+<img width="1919" height="616" alt="Screenshot 2025-08-09 151100" src="https://github.com/user-attachments/assets/9c7ab7b3-d5a4-4661-a30d-6b0091dab035" />
+
 
 
 
@@ -151,6 +152,25 @@ The application is pre-populated with two default users. The password for both i
     `http://localhost:8080/`
 2.  Use the `/api/auth/signin` endpoint to get a JWT token.
 3.  Click the `Authorize` button at the top of the Swagger page and paste your token (e.g., `eyJhbG...`) into the `Value` field to access the locked API endpoints.
+
+### ** OUTPUTS**
+<img width="1919" height="864" alt="Screenshot 2025-08-09 150845" src="https://github.com/user-attachments/assets/284cd566-756e-4e2d-89ec-05d473e57b9e" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 150855" src="https://github.com/user-attachments/assets/ba7e5f28-35f7-43ef-9dee-bf0e032c4327" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 150915" src="https://github.com/user-attachments/assets/b6f9b964-1b83-4449-bbec-9067bd3c0ab4" />
+<img width="1919" height="682" alt="Screenshot 2025-08-09 150928" src="https://github.com/user-attachments/assets/9c0f5d38-6398-428f-9607-e84059256da5" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 150956" src="https://github.com/user-attachments/assets/90b4f7ee-c822-4eff-b1c8-4bcbe3c2efb8" />
+<img width="1919" height="973" alt="Screenshot 2025-08-09 151029" src="https://github.com/user-attachments/assets/3708588e-ac0f-4c93-9934-49fe35efe071" />
+<img width="1919" height="616" alt="Screenshot 2025-08-09 151100" src="https://github.com/user-attachments/assets/0a69e525-1359-4691-b300-47dbaae55e6d" />
+
+
+
+
+
+
+
+
+
+
 
 
 
